@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rssFeed
+  name: rssfeed
 spec:
   type: ClusterIP
   ports:

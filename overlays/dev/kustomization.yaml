@@ -16,10 +16,10 @@ transformers:
 
 images:
   - name: IMAGE_NAME/PATH:TAG
-    newName: rssFeed
+    newName: rssfeed
     newTag: latest
 
 labels:
   - includeSelectors: true
     pairs:
-      app: rssFeed
+      app: rssfeed

@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rssFeed
+  name: rssfeed
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: rssFeed
+      app: rssfeed
   template:
     metadata:
       labels:
-        app: rssFeed
+        app: rssfeed
     spec:
       containers:
-        - name: rssFeed
-          image: "rssFeed:latest"
+        - name: rssfeed
+          image: "rssfeed:latest"
           imagePullPolicy: Never
           ports:
             - containerPort: 3000
@@ -28,7 +28,7 @@ spec:
               memory: 1500Mi
           envFrom:
             - secretRef:
-                name: rssFeed-secret
+                name: rssfeed-secret
   strategy:
     canary:
       steps:

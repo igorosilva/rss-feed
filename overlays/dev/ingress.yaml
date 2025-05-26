@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: rssFeed-ingress
+  name: rssfeed-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: rssFeed-dev
+    - host: rssfeed-dev
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: rssFeed-dev
+                name: rssfeed-dev
                 port:
                   number: 3000

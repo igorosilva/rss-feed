@@ -8,7 +8,7 @@ spec:
     namespace: k8s-demo-dev
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/Joaovitorsw/js-k8s-demo.git
+    repoURL: https://github.com/igorosilva/k8s-demo
     path: k8s-demo-backend/overlays/dev
     targetRevision: HEAD
   project: default
