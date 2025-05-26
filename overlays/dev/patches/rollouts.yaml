@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: rssfeed
-          image: "rssfeed:latest"
+          image: "iosilva/rssfeed:latest"
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
