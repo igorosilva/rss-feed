@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: rssfeed-config
 data:
-  EXAMPLE_KEY: "value"
+  application.properties:
+    nasa-client.url: "https://www.nasa.gov/news-release/feed/"
