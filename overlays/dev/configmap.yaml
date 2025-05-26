@@ -4,4 +4,5 @@ metadata:
   name: rssfeed-config
 data:
   application.properties:
-    nasa-client.url: "https://www.nasa.gov/news-release/feed/"
+    nasa-client.url:https://www.nasa.gov/news-release/feed/
+    nasa-client.cron=*/5 * * * * *
