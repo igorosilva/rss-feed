@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rssfeed
-  namespace: rssfeed-dev
+  namespace: rssfeed
 spec:
   replicas: 2
   selector:

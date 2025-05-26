@@ -2,7 +2,6 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: rssfeed-hpa
-  namespace: rssfeed-dev
 spec:
   scaleTargetRef:
     apiVersion: argoproj.io/v1alpha1
