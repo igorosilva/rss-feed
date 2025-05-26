@@ -11,5 +11,5 @@ data:
 
     spring.data.mongodb.uri=mongodb://${MONGO_USER}:${MONGO_PASSWORD}@localhost:27017
     spring.data.mongodb.database=SOAP
-    nasa-client.url:https://www.nasa.gov/news-release/feed/
+    nasa-client.url=https://www.nasa.gov/news-release/feed/
     nasa-client.cron=*/5 * * * * *
