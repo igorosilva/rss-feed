@@ -7,7 +7,7 @@ spec:
     - host: rssfeed-dev
       http:
         paths:
-          - path: /
+          - path: /rssfeed
             pathType: Prefix
             backend:
               service:
