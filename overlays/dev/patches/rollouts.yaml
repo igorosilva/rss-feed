@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: rssfeed
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: rssfeed
@@ -18,7 +18,14 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
-          env: []
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: >
+                -Duser.timezone=America/Sao_Paulo
+                -XX:MinRAMPercentage=10
+                -XX:MaxRAMPercentage=75
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://admin:admin123456@mongo-mongodb:27017
           resources:
             limits:
               cpu: 500m
@@ -27,6 +34,8 @@ spec:
               cpu: 200m
               memory: 1500Mi
           envFrom:
+            - configMapRef:
+                name: rssfeed-config
             - secretRef:
                 name: rssfeed-secret
   strategy:

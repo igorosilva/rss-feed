@@ -3,4 +3,14 @@ kind: ConfigMap
 metadata:
   name: rssfeed-config
 data:
-  EXAMPLE_KEY: "value"
+  application.properties: |
+    spring.application.name=rssFeed
+
+    server.port=8887
+    server.servlet.context-path=/v1/api/rssFeed
+
+    spring.data.mongodb.uri=mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo-dev:27017
+    spring.data.mongodb.database=SOAP
+
+    nasa-client.url=https://www.nasa.gov/news-release/feed/
+    nasa-client.cron=*/5 * * * * *
