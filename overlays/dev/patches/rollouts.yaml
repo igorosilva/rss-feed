@@ -30,7 +30,7 @@ spec:
               memory: 1500Mi
           envFrom:
             - configMapRef:
-                name: rssfeed-configmap
+                name: rssfeed-config
             - secretRef:
                 name: rssfeed-secret
   strategy:
