@@ -4,6 +4,9 @@ metadata:
   name: rssfeed-config
 data:
   application.properties: |
+    application.title=rss-feed
+    expanded.project.version=@project.version@
+  
     spring.application.name=rssFeed
 
     server.port=8887
